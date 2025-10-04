@@ -10,7 +10,7 @@
 </style>
  
 <div class="container mt-5">
-    
+
     <form class="col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <h2 class="text  text-center"> Welcome in @Homsi-cafe</h2>
@@ -64,7 +64,7 @@
             <td>{{recipe.recipe_name}}</td>
             <td>{{recipe.recipe_description}}</td>
             <td>
-                <img src="/media/{{recipe.recipe_image}}" style="height: 100px;"> </td>
+                <img src="/templetes/recipe/{{recipe.recipe_image}}" style="height: 100px;"> </td>
                 <td>
                     <a href="/delete_recipe/{{recipe.id }}" class="btn btn-danger m-2">Delete</a>
                     <a href="/update_recipe/{{recipe.id }}" class="btn btn-success">Update</a>
